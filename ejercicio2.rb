@@ -44,9 +44,9 @@ class Cuadrado
   end
 end
 
-rectangulo = Rectangulo.new(4, 2)
-cuadrado = Cuadrado.new(4)
-puts "El perimetro de rectangulo es #{rectangulo.perimetro_}"
-puts "El area de rectangulo es #{rectangulo.area_}"
-puts "El perimetro de cuadrado es #{cuadrado.perimetro_}"
-puts "El area de cuadrado es #{cuadrado.area_}"
+r1 = Rectangulo.new(4, 2)
+c1 = Cuadrado.new(4)
+puts "El perimetro de rectangulo es #{r1.perimetro_}"
+puts "El area de rectangulo es #{r1.area_}"
+puts "El perimetro de cuadrado es #{c1.perimetro_}"
+puts "El area de cuadrado es #{c1.area_}"
