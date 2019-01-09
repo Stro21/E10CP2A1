@@ -12,3 +12,14 @@ class Cuadrado
     @lado = lado
   end
 end
+
+# Este modulo es para una Formula.
+module Formula
+  def perimetro(lado1, lado2)
+    2 * lado1 + 2 * lado2
+  end
+
+  def area(lado1, lado2)
+    lado1 * lado2
+  end
+end
