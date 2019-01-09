@@ -32,8 +32,8 @@ end
 
 rectangulo = Rectangulo.new(4, 2)
 cuadrado = Cuadrado.new(4)
-puts "El perimetro de rectangulo es #{rectangulo.perimetro(rectangulo.lado1, rectangulo.lado2)}"
-puts "El area de rectangulo es #{rectangulo.area(rectangulo.lado1, rectangulo.lado2)}"
+puts "El perimetro de rectangulo es #{rectangulo.perimetro(rectangulo.base, rectangulo.altura)}"
+puts "El area de rectangulo es #{rectangulo.area(rectangulo.base, rectangulo.altura)}"
 puts "El perimetro de cuadrado es #{cuadrado.perimetro(cuadrado.lado, cuadrado.lado)}"
 puts "El area de cuadrado es #{cuadrado.area(cuadrado.lado, cuadrado.lado)}"
 
