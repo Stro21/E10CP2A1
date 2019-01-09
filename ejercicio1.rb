@@ -9,11 +9,15 @@ class Alumno
   end
 end
 
-alumnos = []
-data = []
-File.open('notas.txt', 'r') { |file| data = file.readlines }
-data.each do |alumno|
-  alumnos << Alumno.new(*alumno.split(', '))
+def read_file(text)
+  alumnos = []
+  data = []
+  File.open(text, 'r') { |file| data = file.readlines }
+  data.each do |alumno|
+    alumnos << Alumno.new(*alumno.split(', '))
+  end
 end
+
+alumnos = read_file('notas.txt')
 
 print alumnos
