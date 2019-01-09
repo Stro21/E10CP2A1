@@ -12,7 +12,7 @@ end
 def read_file(text)
   alumnos = []
   data = []
-  File.open(text, 'r') { |file| data = file.readlines }
+  File.open(text, 'r') { |file| data = file.readlines.map(&:chomp) }
   data.each do |alumno|
     alumnos << Alumno.new(*alumno.split(', '))
   end
