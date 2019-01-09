@@ -1,5 +1,6 @@
 # Esta es una clase de un Rectangulo.
 class Rectangulo
+  include Formula
   def initialize(base, altura)
     @base = base
     @altura = altura
@@ -8,6 +9,7 @@ end
 
 # Esta es una clase de un Cuadrado.
 class Cuadrado
+  include Formula
   def initialize(lado)
     @lado = lado
   end
