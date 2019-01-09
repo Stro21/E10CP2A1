@@ -8,6 +8,8 @@ class MiPrimeraWebApp
       [202, { 'Content-Type' => 'text/html' }, ['<h1> INDEX </h1>']]
     elsif env['REQUEST_PATH'] == '/index'
       [200, { 'Content-Type' => 'text/html' }, ['Estás en el Index!']]
+    elsif env['REQUEST_PATH'] == '/otro'
+      [200, { 'Content-Type' => 'text/html' }, ['Estás en otro landing!']]
     end
   end
 end
