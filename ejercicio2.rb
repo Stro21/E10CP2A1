@@ -1,27 +1,27 @@
 # Este modulo es para una Formula.
 module Formula
   def perimetro
-    lado1 = instance_variable_get(instance_variables[0])
     if square?
-      4 * lado1
+      4 * side(0)
     else
-      lado2 = instance_variable_get(instance_variables[1])
-      2 * (lado1 + lado2)
+      2 * (side(0) + side(1))
     end
   end
 
   def area
-    lado1 = instance_variable_get(instance_variables[0])
     if square?
-      lado1**2
+      side(0)**2
     else
-      lado2 = instance_variable_get(instance_variables[1])
-      lado1 * lado2
+      side(0) * side(1)
     end
   end
 
   def square?
     self.class == Cuadrado
+  end
+
+  def side(ind)
+    instance_variable_get(instance_variables[ind])
   end
 end
 
