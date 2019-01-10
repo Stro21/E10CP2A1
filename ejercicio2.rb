@@ -2,7 +2,7 @@
 module Formula
   def perimetro
     lado1 = self.instance_variable_get(self.instance_variables[0])
-    if is_square
+    if square?
       4 * lado1
     else
       lado2 = self.instance_variable_get(self.instance_variables[1])
@@ -12,7 +12,7 @@ module Formula
 
   def area
     lado1 = self.instance_variable_get(self.instance_variables[0])
-    if is_square
+    if square?
       lado1**2
     else
       lado2 = self.instance_variable_get(self.instance_variables[1])
@@ -20,7 +20,7 @@ module Formula
     end
   end
 
-  def is_square
+  def square?
     self.class == Cuadrado
   end
 end
