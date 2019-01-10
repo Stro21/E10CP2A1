@@ -1,6 +1,8 @@
 # config.ru
 require 'rack'
 
+# rubocop:disable LineLength
+
 # The class of a first web app.
 class MiPrimeraWebApp
   def call(env)
@@ -16,3 +18,5 @@ class MiPrimeraWebApp
   end
 end
 run MiPrimeraWebApp.new
+
+# rubocop:enable LineLength
