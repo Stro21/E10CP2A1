@@ -1,11 +1,27 @@
 # Este modulo es para una Formula.
 module Formula
-  def perimetro(lado1, lado2)
-    2 * (lado1 + lado2)
+  def perimetro
+    lado1 = self.instance_variable_get(self.instance_variables[0])
+    if is_square
+      4 * lado1
+    else
+      lado2 = self.instance_variable_get(self.instance_variables[1])
+      2 * (lado1 + lado2)
+    end
   end
 
-  def area(lado1, lado2)
-    lado1 * lado2
+  def area
+    lado1 = self.instance_variable_get(self.instance_variables[0])
+    if is_square
+      lado1**2
+    else
+      lado2 = self.instance_variable_get(self.instance_variables[1])
+      lado1 * lado2
+    end
+  end
+
+  def is_square
+    self.class == Cuadrado
   end
 end
 
@@ -46,7 +62,7 @@ end
 
 r1 = Rectangulo.new(4, 2)
 c1 = Cuadrado.new(4)
-puts "El perimetro de rectangulo es #{r1.perimetro_}"
-puts "El area de rectangulo es #{r1.area_}"
-puts "El perimetro de cuadrado es #{c1.perimetro_}"
-puts "El area de cuadrado es #{c1.area_}"
+puts "El perimetro de rectangulo es #{r1.perimetro}"
+puts "El area de rectangulo es #{r1.area}"
+puts "El perimetro de cuadrado es #{c1.perimetro}"
+puts "El area de cuadrado es #{c1.area}"
