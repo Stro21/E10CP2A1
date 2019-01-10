@@ -11,7 +11,7 @@ class MiPrimeraWebApp
     elsif env['REQUEST_PATH'] == '/otro'
       [200, { 'Content-Type' => 'text/html' }, ['Estás en otro landing!']]
     else
-      [404, { 'Content-Type' => 'text/html' }, '404.html']
+      [404, { 'Content-Type' => 'text/html' }, [File.read('404.html')]]
     end
   end
 end
